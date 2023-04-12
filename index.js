@@ -53,7 +53,6 @@ const loadQuiz = async () => {
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  console.log(data);
   if (!data) {
     quizContainer.innerHTML = "";
     return;
@@ -76,8 +75,8 @@ const displayQuiz = (data) => {
 
 // EventListener for quiz submit button
 document.getElementById("submit").addEventListener("click", () => {
-  console.log("object");
   if (answers.length < 6) {
+    alert("Please answer all questions");
     return;
   }
   quizTimer(true);
@@ -110,7 +109,7 @@ document.getElementById("submit").addEventListener("click", () => {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("result"));
+  let storage = JSON.parse(localStorage.getItem("results"));
   if (storage) {
     localStorage.setItem(
       "results",
@@ -142,7 +141,7 @@ document.getElementById("submit").addEventListener("click", () => {
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
-    <h3 class="text-xl ${grade.color}">${grade.status}</h3>
+    <h3 class="text-xl">${grade.status}</h3>
     <h1 class="text-3xl font-bold my-2">
       ${totalMark}<span class="text-slate-800">/60</span>
     </h1>
