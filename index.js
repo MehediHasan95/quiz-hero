@@ -75,7 +75,8 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+document.getElementById("submit").addEventListener("click", () => {
+  console.log("object");
   if (answers.length < 6) {
     return;
   }
@@ -152,7 +153,7 @@ document.querySelector("#submit").addEventlistener("click", () => {
       )}<span class="text-xs">sec</span></span>
     </p>
   </div>
-  
+
   <button onclick="location.reload();" class="bg-green-600 text-white w-full py-2 rounded mt-16">Restart</button>
   ${
     storage
@@ -179,7 +180,6 @@ document.querySelector("#submit").addEventlistener("click", () => {
   }
   </div>
   `;
-
     clearTimeout(x);
   }, 1500);
   window.scrollTo(0, 0);
