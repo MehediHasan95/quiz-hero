@@ -5,6 +5,7 @@ let quizData;
 let answers = [];
 
 // Dom elements called
+let blog = document.getElementById("blog");
 let startQuiz = document.querySelector("#startQuiz");
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
@@ -12,6 +13,11 @@ let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
+
+// Navigate to blog page
+blog.addEventListener("click", () => {
+  location.href = "/blog.html";
+});
 
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
@@ -153,7 +159,7 @@ document.getElementById("submit").addEventListener("click", () => {
     </p>
   </div>
 
-  <button onclick="location.reload();" class="bg-green-600 text-white w-full py-2 rounded mt-16">Restart</button>
+  <button onclick="location.reload();" class="bg-green-600 hover:bg-green-700 text-white w-full py-2 rounded mt-16">Restart</button>
   ${
     storage
       ? `<div class="mt-5">
