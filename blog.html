@@ -3,12 +3,118 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quiz Hero Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <script src="./noChange.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <header>
-      <h1>Welcome to blog</h1>
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+        <button
+          onclick="{location.href = '/index.html'}"
+          class="bg-green-600 hover:bg-green-700 font-light text-sm px-5 py-1 rounded text-white"
+        >
+          Home
+        </button>
+      </nav>
     </header>
-    <main></main>
+    <!-- Header/Navbar section end -->
+    <main>
+      <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto" id="rulesContainer">
+        <div class="p-5 my-3 bg-green-50 shadow rounded">
+          <h1 class="text-2xl font-semibold">
+            What is the difference between map, filter, find and forEach?
+          </h1>
+          <p>
+            Map and filter create new arrays, find returns the first element
+            that satisfies a condition, and forEach performs an operation on
+            each element of an array without creating a new array or returning
+            any value.
+          </p>
+        </div>
+        <div class="p-5 my-3 bg-green-50 shadow rounded">
+          <h1 class="text-2xl font-semibold">
+            What is the difference between local-storage session-storage and a
+            cookie?
+          </h1>
+          <p>
+            Local storage, session storage, and cookies are different mechanisms
+            for storing data in web browsers, each with its own advantages and
+            use cases. Local storage and session storage are typically used for
+            larger amounts of client-side data that is accessed by JavaScript
+            code on a specific website, while cookies are more commonly used for
+            smaller amounts of data that need to be shared across different
+            domains or accessed by server-side scripts. Cookies also have
+            built-in expiration times, can be automatically sent to the server,
+            and are subject to certain security vulnerabilities, whereas local
+            storage and session storage are not automatically sent to the
+            server, do not have built-in expiration times, and are generally
+            considered more secure.
+          </p>
+        </div>
+        <div class="p-5 my-3 bg-green-50 shadow rounded">
+          <h1 class="text-2xl font-semibold">
+            What is event loop in JavaScript and how it works?
+          </h1>
+          <p>
+            The event loop in JavaScript is a mechanism that allows for handling
+            asynchronous events and managing concurrent execution of code. It
+            uses an event queue, a call stack, and callbacks to ensure that
+            events are processed in an orderly manner without blocking the main
+            thread of execution. Understanding how the event loop works is
+            crucial for writing efficient and responsive asynchronous code in
+            JavaScript.
+          </p>
+        </div>
+        <div class="p-5 my-3 bg-green-50 shadow rounded">
+          <h1 class="text-2xl font-semibold">
+            What is event loop in JavaScript and how it works?
+          </h1>
+          <p>
+            The event loop in JavaScript is a mechanism that allows for handling
+            asynchronous events and managing concurrent execution of code. It
+            uses an event queue, a call stack, and callbacks to ensure that
+            events are processed in an orderly manner without blocking the main
+            thread of execution. Understanding how the event loop works is
+            crucial for writing efficient and responsive asynchronous code in
+            JavaScript.
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

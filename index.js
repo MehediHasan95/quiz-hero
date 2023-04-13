@@ -5,7 +5,7 @@ let quizData;
 let answers = [];
 
 // Dom elements called
-let blog = document.getElementById("blog");
+
 let startQuiz = document.querySelector("#startQuiz");
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
@@ -13,11 +13,6 @@ let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
-
-// Navigate to blog page
-blog.addEventListener("click", () => {
-  location.href = "/blog.html";
-});
 
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
